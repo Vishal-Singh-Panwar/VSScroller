@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "VSScrollView.h"
-@interface VSViewController : UIViewController<VSScrollerDatasource,UITextFieldDelegate>
+@interface VSViewController : UIViewController<VSScrollerDatasource,VSScrollerDelegate,UITextFieldDelegate>
+
 
 @property (weak, nonatomic) IBOutlet UITextField *positionTf;
 @property (weak, nonatomic) IBOutlet VSScrollView *tableTypeScroll;

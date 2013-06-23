@@ -26,10 +26,11 @@
     [self.tableTypeScroll setDataSource:self];
     [self.tableTypeScroll setPaginationEnabled:NO];
     [self.tableTypeScroll setAllowVerticalScrollingForOutOfBoundsCell:YES];
+    [self.tableTypeScroll setDelegate:self];
     dataArr = [[NSMutableArray alloc]init];
     for (int i = 0;i<100;i++)
     {
-        [dataArr addObject:[NSString stringWithFormat:@"Batman is coming..  %i",i]];
+        [dataArr addObject:[NSString stringWithFormat:@"The Dark Knight is rising..  %i",i]];
                            
     }
 	// Do any additional setup after loading the view, typically from a nib.
@@ -100,6 +101,7 @@
     if (!myView)
     {
         myView = [[VSMyCustomScrollerView alloc]initWithIdentifier:identifier];
+       
 
     }
     myView.layer.borderWidth = 2.0;
@@ -109,7 +111,6 @@
     float alphaValue = (float)(position+1)/[dataArr count];
     [myView.myImageView setAlpha:alphaValue];
      myView.textLabel.text = [NSString stringWithFormat:@"  %@",[dataArr objectAtIndex:position]];
-    [myView.textLabel setFont:[UIFont systemFontOfSize:10.0]];
     return myView;
 }
 - (IBAction)showCurrentlyVissiblePositions:(id)sender
@@ -124,7 +125,7 @@
     UIButton *btn = (UIButton *)sender;
     if (btn.tag==102)
     {
-        [dataArr addObject:[NSString stringWithFormat:@"Batman is coming..  %i",[dataArr count]]];
+        [dataArr addObject:[NSString stringWithFormat:@"The Dark Knight is rising..  %i",[dataArr count]]];
 
     }
     else
@@ -159,6 +160,20 @@
     
 }
 
+-(void)vsscrollView:(VSScrollView *)scrollview willDisplayCell:(VSScrollViewCell *)cell atPosition:(int)position
+{
+
+    VSMyCustomScrollerView *myCustomCell = (VSMyCustomScrollerView *)cell;
+
+    CGRect frame = myCustomCell.myImageView.frame;
+    frame.origin.y =  frame.size.height-(frame.size.height/[dataArr count])*position;
+        
+    [myCustomCell.myImageView setFrame:frame];
+    
+
+
+}
+
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -173,7 +188,8 @@
 
 
 
-- (void)viewDidUnload {
+- (void)viewDidUnload
+{
     [self setPositionTf:nil];
     [super viewDidUnload];
 }

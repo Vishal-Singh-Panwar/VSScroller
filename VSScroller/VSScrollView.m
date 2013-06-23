@@ -127,7 +127,13 @@
             [view setTag:i+100];
              if (![myScrollView viewWithTag:view.tag])
             {
-                [myScrollView addSubview:view];
+
+                 [myScrollView addSubview:view];
+            }
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(vsscrollView:willDisplayCell:atPosition:)])
+            {
+                [self.delegate vsscrollView:self willDisplayCell:view atPosition:i];
             }
             NSSortDescriptor *sortDesc = [[NSSortDescriptor alloc] initWithKey:@"" ascending:YES];
             [currentlyVissiblePositions sortUsingDescriptors:[NSArray arrayWithObject:sortDesc]];
@@ -141,6 +147,8 @@
     }
 
 }
+
+
 
 
 -(VSScrollViewCell *)viewAtPosition:(int)i
@@ -243,6 +251,10 @@
                 {
                     [myScrollView addSubview:view];
                 }
+                if (self.delegate && [self.delegate respondsToSelector:@selector(vsscrollView:willDisplayCell:atPosition:)])
+                {
+                    [self.delegate vsscrollView:self willDisplayCell:view atPosition:nextPosition];
+                }
                 
             }
         }
@@ -315,6 +327,10 @@
         if (![myScrollView viewWithTag:view.tag])
         {
             [myScrollView addSubview:view];
+        }
+        if (self.delegate && [self.delegate respondsToSelector:@selector(vsscrollView:willDisplayCell:atPosition:)])
+        {
+            [self.delegate vsscrollView:self willDisplayCell:view atPosition:position];
         }
 
     }

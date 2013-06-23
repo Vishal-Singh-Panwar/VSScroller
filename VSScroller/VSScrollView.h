@@ -20,6 +20,16 @@
 
 -(CGFloat)vsscrollView:(VSScrollView *)scrollView heightForViewAtPosition:(int)position; // you can decide the height for cells at each position...by default, height will be height of VSScrollview.
 
+
+@end
+
+
+@protocol VSScrollerDelegate <NSObject>
+
+@optional
+-(void)vsscrollView:(VSScrollView *)scrollview willDisplayCell:(VSScrollViewCell *)cell atPosition:(int)position; //is called whenever a cell is ready to be displayed
+
+
 @end
 typedef enum AnimationType
 {
@@ -31,6 +41,8 @@ typedef enum AnimationType
 @interface VSScrollView : UIView<UIScrollViewDelegate>
 
 @property(nonatomic,weak)id<VSScrollerDatasource>dataSource;
+@property(nonatomic,weak)id<VSScrollerDelegate>delegate;
+
 @property(nonatomic,assign)BOOL paginationEnabled;
 @property(nonatomic,assign)BOOL allowVerticalScrollingForOutOfBoundsCell;  // tells whether VSScrollview should scroll vertically when some cell's height is greater thans VSSCrollview's height.
 
