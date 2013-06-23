@@ -1,4 +1,4 @@
-First of all hello to Github. this is my first repo. I do not have much experience, just made this class which is still under construction. Hoping that I can get some suggestions to improve this class. Right now many adjustments are done to avoid some flickers in this class during fast scrolling when vissible views have smaller widths.  I have not used some of the properties quite well, like identifier of VSScrollViewCell. But yes it can prove to be a very helpful class for the starters in objective C:P.
+First of all hello to Github. this is my first repo. I do not have much experience, just made this class which is still under construction. Hoping that I can get some suggestions to improve this class. Right now many adjustments are done to avoid some flickers in this class during fast scrolling when vissible views have smaller widths.  I have not used some of the properties quite well, like identifier of VSScrollViewCell. But yes it can prove to be a very helpful class for the starters in objective C.
 
 
 VSScrollview -  Its use is similar to using  UITableView. 
@@ -25,6 +25,11 @@ You have to implement two datasource methods of VSScrollview just like UITableVi
 // you can decide the height for cells at each position...by default, height will be height of VSScrollview.
 
 
+******Delegate methods******
+I have made just one optional delagte method as for now
+
+-(void)vsscrollView:(VSScrollView *)scrollview willDisplayCell:(VSScrollViewCell *)cell atPosition:(int)position; 
+//it is called whenever a cell is ready to be displayed.
 
 Few properties and methods
 
