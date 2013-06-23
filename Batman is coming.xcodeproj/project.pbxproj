@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D55643FB1759D3140085468E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55643FA1759D3140085468E /* UIKit.framework */; };
+		D55643FD1759D3140085468E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55643FC1759D3140085468E /* Foundation.framework */; };
+		D55643FF1759D3140085468E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55643FE1759D3140085468E /* CoreGraphics.framework */; };
+		D55644051759D3140085468E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D55644031759D3140085468E /* InfoPlist.strings */; };
+		D55644071759D3140085468E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D55644061759D3140085468E /* main.m */; };
+		D556440B1759D3140085468E /* VSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D556440A1759D3140085468E /* VSAppDelegate.m */; };
+		D556440D1759D3140085468E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D556440C1759D3140085468E /* Default.png */; };
+		D556440F1759D3140085468E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D556440E1759D3140085468E /* Default@2x.png */; };
+		D55644111759D3140085468E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D55644101759D3140085468E /* Default-568h@2x.png */; };
+		D55644141759D3140085468E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55644121759D3140085468E /* MainStoryboard.storyboard */; };
+		D55644171759D3140085468E /* VSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D55644161759D3140085468E /* VSViewController.m */; };
+		D556441F1759D3600085468E /* VSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D556441E1759D3600085468E /* VSScrollView.m */; };
+		D55644221759D7CE0085468E /* VSScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D55644211759D7CE0085468E /* VSScrollViewCell.m */; };
+		D55644241759E6E50085468E /* VSScrollerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D55644231759E6E50085468E /* VSScrollerView.xib */; };
+		D55644261759E91C0085468E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55644251759E91C0085468E /* QuartzCore.framework */; };
+		D556442B175A44EF0085468E /* VSMyCustomScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D556442A175A44EF0085468E /* VSMyCustomScrollerView.m */; };
+		D556442D175A45120085468E /* VSMyCustomScrollerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D556442C175A45120085468E /* VSMyCustomScrollerView.xib */; };
+		D556442F175A49880085468E /* batman.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D556442E175A49880085468E /* batman.jpeg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D55643F71759D3140085468E /* Batman is coming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Batman is coming.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D55643FA1759D3140085468E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D55643FC1759D3140085468E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D55643FE1759D3140085468E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D55644021759D3140085468E /* Batman is coming-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Batman is coming-Info.plist"; sourceTree = "<group>"; };
+		D55644041759D3140085468E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D55644061759D3140085468E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D55644081759D3140085468E /* Batman is coming-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Batman is coming-Prefix.pch"; sourceTree = "<group>"; };
+		D55644091759D3140085468E /* VSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSAppDelegate.h; sourceTree = "<group>"; };
+		D556440A1759D3140085468E /* VSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VSAppDelegate.m; sourceTree = "<group>"; };
+		D556440C1759D3140085468E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D556440E1759D3140085468E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D55644101759D3140085468E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D55644131759D3140085468E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D55644151759D3140085468E /* VSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSViewController.h; sourceTree = "<group>"; };
+		D55644161759D3140085468E /* VSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VSViewController.m; sourceTree = "<group>"; };
+		D556441D1759D3600085468E /* VSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSScrollView.h; sourceTree = "<group>"; };
+		D556441E1759D3600085468E /* VSScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSScrollView.m; sourceTree = "<group>"; };
+		D55644201759D7CE0085468E /* VSScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSScrollViewCell.h; sourceTree = "<group>"; };
+		D55644211759D7CE0085468E /* VSScrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSScrollViewCell.m; sourceTree = "<group>"; };
+		D55644231759E6E50085468E /* VSScrollerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VSScrollerView.xib; sourceTree = "<group>"; };
+		D55644251759E91C0085468E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D5564429175A44EF0085468E /* VSMyCustomScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSMyCustomScrollerView.h; sourceTree = "<group>"; };
+		D556442A175A44EF0085468E /* VSMyCustomScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSMyCustomScrollerView.m; sourceTree = "<group>"; };
+		D556442C175A45120085468E /* VSMyCustomScrollerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VSMyCustomScrollerView.xib; sourceTree = "<group>"; };
+		D556442E175A49880085468E /* batman.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = batman.jpeg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D55643F41759D3140085468E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55644261759E91C0085468E /* QuartzCore.framework in Frameworks */,
+				D55643FB1759D3140085468E /* UIKit.framework in Frameworks */,
+				D55643FD1759D3140085468E /* Foundation.framework in Frameworks */,
+				D55643FF1759D3140085468E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D55643EE1759D3130085468E = {
+			isa = PBXGroup;
+			children = (
+				D55644001759D3140085468E /* VSScroller */,
+				D55643F91759D3140085468E /* Frameworks */,
+				D55643F81759D3140085468E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D55643F81759D3140085468E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D55643F71759D3140085468E /* Batman is coming.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D55643F91759D3140085468E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D55644251759E91C0085468E /* QuartzCore.framework */,
+				D55643FA1759D3140085468E /* UIKit.framework */,
+				D55643FC1759D3140085468E /* Foundation.framework */,
+				D55643FE1759D3140085468E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D55644001759D3140085468E /* VSScroller */ = {
+			isa = PBXGroup;
+			children = (
+				D55644091759D3140085468E /* VSAppDelegate.h */,
+				D556440A1759D3140085468E /* VSAppDelegate.m */,
+				D55644121759D3140085468E /* MainStoryboard.storyboard */,
+				D55644151759D3140085468E /* VSViewController.h */,
+				D55644161759D3140085468E /* VSViewController.m */,
+				D5564429175A44EF0085468E /* VSMyCustomScrollerView.h */,
+				D556442A175A44EF0085468E /* VSMyCustomScrollerView.m */,
+				D556442C175A45120085468E /* VSMyCustomScrollerView.xib */,
+				D556441D1759D3600085468E /* VSScrollView.h */,
+				D556441E1759D3600085468E /* VSScrollView.m */,
+				D55644201759D7CE0085468E /* VSScrollViewCell.h */,
+				D55644211759D7CE0085468E /* VSScrollViewCell.m */,
+				D55644231759E6E50085468E /* VSScrollerView.xib */,
+				D556442E175A49880085468E /* batman.jpeg */,
+				D55644011759D3140085468E /* Supporting Files */,
+			);
+			path = VSScroller;
+			sourceTree = "<group>";
+		};
+		D55644011759D3140085468E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D55644021759D3140085468E /* Batman is coming-Info.plist */,
+				D55644031759D3140085468E /* InfoPlist.strings */,
+				D55644061759D3140085468E /* main.m */,
+				D55644081759D3140085468E /* Batman is coming-Prefix.pch */,
+				D556440C1759D3140085468E /* Default.png */,
+				D556440E1759D3140085468E /* Default@2x.png */,
+				D55644101759D3140085468E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D55643F61759D3140085468E /* Batman is coming */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D556441A1759D3140085468E /* Build configuration list for PBXNativeTarget "Batman is coming" */;
+			buildPhases = (
+				D55643F31759D3140085468E /* Sources */,
+				D55643F41759D3140085468E /* Frameworks */,
+				D55643F51759D3140085468E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Batman is coming";
+			productName = VSScroller;
+			productReference = D55643F71759D3140085468E /* Batman is coming.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D55643EF1759D3130085468E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Vishal Singh Panwar";
+			};
+			buildConfigurationList = D55643F21759D3130085468E /* Build configuration list for PBXProject "Batman is coming" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D55643EE1759D3130085468E;
+			productRefGroup = D55643F81759D3140085468E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D55643F61759D3140085468E /* Batman is coming */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D55643F51759D3140085468E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55644051759D3140085468E /* InfoPlist.strings in Resources */,
+				D556440D1759D3140085468E /* Default.png in Resources */,
+				D556440F1759D3140085468E /* Default@2x.png in Resources */,
+				D55644111759D3140085468E /* Default-568h@2x.png in Resources */,
+				D55644141759D3140085468E /* MainStoryboard.storyboard in Resources */,
+				D55644241759E6E50085468E /* VSScrollerView.xib in Resources */,
+				D556442D175A45120085468E /* VSMyCustomScrollerView.xib in Resources */,
+				D556442F175A49880085468E /* batman.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D55643F31759D3140085468E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55644071759D3140085468E /* main.m in Sources */,
+				D556440B1759D3140085468E /* VSAppDelegate.m in Sources */,
+				D55644171759D3140085468E /* VSViewController.m in Sources */,
+				D556441F1759D3600085468E /* VSScrollView.m in Sources */,
+				D55644221759D7CE0085468E /* VSScrollViewCell.m in Sources */,
+				D556442B175A44EF0085468E /* VSMyCustomScrollerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D55644031759D3140085468E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55644041759D3140085468E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D55644121759D3140085468E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55644131759D3140085468E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D55644181759D3140085468E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D55644191759D3140085468E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D556441B1759D3140085468E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VSScroller/Batman is coming-Prefix.pch";
+				INFOPLIST_FILE = "VSScroller/Batman is coming-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "Batman is coming";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D556441C1759D3140085468E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VSScroller/Batman is coming-Prefix.pch";
+				INFOPLIST_FILE = "VSScroller/Batman is coming-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "Batman is coming";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D55643F21759D3130085468E /* Build configuration list for PBXProject "Batman is coming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55644181759D3140085468E /* Debug */,
+				D55644191759D3140085468E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D556441A1759D3140085468E /* Build configuration list for PBXNativeTarget "Batman is coming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D556441B1759D3140085468E /* Debug */,
+				D556441C1759D3140085468E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D55643EF1759D3130085468E /* Project object */;
+}

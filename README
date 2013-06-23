@@ -1,0 +1,60 @@
+First of all hello to Github. this is my first repo. I do not have much experience, just made this class which is still under construction. Hoping that I can get some suggestions to improve this class. Right now many adjustments are done to avoid some flickers in this class during fast scrolling when vissible views have smaller widths.  I have not used some of the properties quite well, like identifier of VSScrollViewCell. But yes it can prove to be a very helpful class for the starters in objective C like me:P.
+
+
+VSScrollview -  Its use is similar to using  UITableView. 
+You have to implement two datasource methods of VSScrollview just like UITableView.
+
+
+-(VSScrollViewCell *)vsscrollView:(VSScrollView *)scrollView viewAtPosition:(int)position;
+// implement this to tell VSScrollview the view at position "position" . This view is VSScrollviewCell or subclass of VSScrollviewCell.
+
+
+-(NSUInteger)numberOfViewInvsscrollview:(VSScrollView *)scrollview;
+// implement this to tell VSScrollview about number of views you want in VSSCrollview.
+
+  It has few optional datasource to customize your VSScrollview.
+
+-(CGFloat)vsscrollView:(VSScrollView *)scrollView widthForViewAtPosition:(int)position;
+ // you can decide variable width for views at differnet position. By default width is width of VSScrollView.
+
+-(CGFloat)cellSpacingAfterCellAtPosition:(int)position;   
+// you can decide cell spacing for each position by implementing this method, by default , spacing is '0'
+
+
+-(CGFloat)vsscrollView:(VSScrollView *)scrollView heightForViewAtPosition:(int)position; 
+// you can decide the height for cells at each position...by default, height will be height of VSScrollview.
+
+
+
+Few properties and methods
+
+@property(nonatomic,assign)BOOL paginationEnabled;
+//tells whether you want pagination or not.
+
+
+@property(nonatomic,assign)BOOL allowVerticalScrollingForOutOfBoundsCell;  
+// tells whether VSScrollview should scroll vertically when some cell's height is greater thans VSSCrollview's height. Useful when you have variable views height. It automatically increases it content size when a view with larger height enters the bound of VSScrollview., and automatically decreases its content size when all the views in the visible rect of VSScrollview have height smaller than VSScrollview's height.
+
+
+-(VSScrollViewCell *)dequeueReusableVSScrollviewCellsWithIdentifier:(NSString *)identifier;
+// returns any dequed VSScrollview if available. Useful in cellForPosition datasource method.
+
+
+-(NSArray *)postionsOfVissibleCells;
+//returns the positions of currently visible Views.
+
+-(void)reloadData;
+reloads the whole Scrollview. It will again call the series of datasoruce methods
+
+-(void)scrollToPosition:(int)position;
+//tells the VSScrollview to scroll to a given position.
+
+
+
+My repo contains a sample project "Batman is coming":p which implements all the functions of VSScrollviews. It shows how you can give variable height, width, position, cell spacing, use variable content size, use its functions like positionsOfVissibleCells, scrollToPosition,reloadData. I have used subclass of VSScrolViewCell which is same as the default VSScrollviewCell, I just used it to show how you can subclass a VSSCrollviewCell. 
+It comes with one UIImageView and one UILabel.
+Hope i can get some help and suggestion for improving this class.
+
+
+
+
