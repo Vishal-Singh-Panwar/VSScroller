@@ -27,7 +27,7 @@
     [self.tableTypeScroll setPaginationEnabled:NO];
     [self.tableTypeScroll setAllowVerticalScrollingForOutOfBoundsCell:YES];
     dataArr = [[NSMutableArray alloc]init];
-    for (int i = 0;i<1000;i++)
+    for (int i = 0;i<100;i++)
     {
         [dataArr addObject:[NSString stringWithFormat:@"Batman is coming..  %i",i]];
                            
@@ -57,14 +57,17 @@
 
 -(CGFloat)cellSpacingAfterCellAtPosition:(int)position
 {
-    return 0;
-    if (position>20)
+    if (position<20)
     {
-        return 100.0;
-
+        return 10.0;
+        
     }
-    return 30.0;
-
+    else if (position<30)
+    {
+        return 50.0;
+        
+    }
+    return 0.0;
 }
 
 
@@ -76,7 +79,7 @@
         return 600.0;
         
     }
-    return 60.0;
+    return scrollView.bounds.size.height;
 
 
 }
