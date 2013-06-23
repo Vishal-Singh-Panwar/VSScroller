@@ -4,6 +4,8 @@ First of all hello to Github. this is my first repo. I do not have much experien
 VSScrollview -  Its use is similar to using  UITableView. 
 You have to implement two datasource methods of VSScrollview just like UITableView.
 
+****** Datasource methods ******
+
 
 -(VSScrollViewCell *)vsscrollView:(VSScrollView *)scrollView viewAtPosition:(int)position;
 // implement this to tell VSScrollview the view at position "position" . This view is VSScrollviewCell or subclass of VSScrollviewCell.
@@ -25,13 +27,13 @@ You have to implement two datasource methods of VSScrollview just like UITableVi
 // you can decide the height for cells at each position...by default, height will be height of VSScrollview.
 
 
-******Delegate methods******
+****** Delegate methods ******
 I have made just one optional delagte method as for now
 
 -(void)vsscrollView:(VSScrollView *)scrollview willDisplayCell:(VSScrollViewCell *)cell atPosition:(int)position; 
 //it is called whenever a cell is ready to be displayed.
 
-Few properties and methods
+****** Properties ******
 
 @property(nonatomic,assign)BOOL paginationEnabled;
 //tells whether you want pagination or not.
@@ -40,6 +42,9 @@ Few properties and methods
 @property(nonatomic,assign)BOOL allowVerticalScrollingForOutOfBoundsCell;  
 // tells whether VSScrollview should scroll vertically when some cell's height is greater thans VSSCrollview's height. Useful when you have variable views height. It automatically increases it content size when a view with larger height enters the bound of VSScrollview., and automatically decreases its content size when all the views in the visible rect of VSScrollview have height smaller than VSScrollview's height.
 
+
+
+****** Methods ******
 
 -(VSScrollViewCell *)dequeueReusableVSScrollviewCellsWithIdentifier:(NSString *)identifier;
 // returns any dequed VSScrollview if available. Useful in cellForPosition datasource method.
