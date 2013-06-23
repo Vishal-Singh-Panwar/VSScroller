@@ -1,4 +1,4 @@
-First of all hello to Github. this is my first repo. I do not have much experience, just made this class which is still under construction. Hoping that I can get some suggestions to improve this class. Right now many adjustments are done to avoid some flickers in this class during fast scrolling when vissible views have smaller widths.  I have not used some of the properties quite well, like identifier of VSScrollViewCell. But yes it can prove to be a very helpful class for the starters in objective C like me:P.
+First of all hello to Github. this is my first repo. I do not have much experience, just made this class which is still under construction. Hoping that I can get some suggestions to improve this class. Right now many adjustments are done to avoid some flickers in this class during fast scrolling when vissible views have smaller widths.  I have not used some of the properties quite well, like identifier of VSScrollViewCell. But yes it can prove to be a very helpful class for the starters in objective C:P.
 
 
 VSScrollview -  Its use is similar to using  UITableView. 
@@ -51,9 +51,15 @@ reloads the whole Scrollview. It will again call the series of datasoruce method
 
 
 
-My repo contains a sample project "Batman is coming":p which implements all the functions of VSScrollviews. It shows how you can give variable height, width, position, cell spacing, use variable content size, use its functions like positionsOfVissibleCells, scrollToPosition,reloadData. I have used subclass of VSScrolViewCell which is same as the default VSScrollviewCell, I just used it to show how you can subclass a VSSCrollviewCell. 
-It comes with one UIImageView and one UILabel.
+My repo contains a sample project "Batman is coming":p which implements all the functions of VSScrollviews. It shows how you can give variable height, width, position, cell spacing, use variable content size, use its functions like positionsOfVissibleCells, scrollToPosition,reloadData. I have used subclass of VSScrolViewCell which is pretty much same as the default VSScrollviewCell, I just used it to show how you can subclass a VSSCrollviewCell. 
+Default comes with one UILabel.
 Hope i can get some help and suggestion for improving this class.
+
+
+
+USE INSTRUCTIONS.
+
+Drag and drop VSScroller.h , VSScroller.m , VSScrolleViewCell.h VSScrollViewCell.m into your project.
 
 
 
