@@ -34,7 +34,7 @@ I have made just two optional delagte method as for now
 //it is called whenever a cell is ready to be displayed.
 
 -(void)positionsVissibleAfterScrolling:(NSArray *)positions; 
-//gets called when scrollview ends decelerating and returns an array of currently vissible positions.
+//gets called when scrollview ends decelerating and gives an array of currently vissible positions.
 
 ****** Properties ******
 

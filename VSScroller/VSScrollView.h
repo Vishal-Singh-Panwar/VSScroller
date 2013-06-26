@@ -29,7 +29,7 @@
 @optional
 -(void)vsscrollView:(VSScrollView *)scrollview willDisplayCell:(VSScrollViewCell *)cell atPosition:(int)position; //is called whenever a cell is ready to be displayed.
 
--(void)positionsVissibleAfterScrolling:(NSArray *)positions; //gets called when scrollview ends decelerating and returns an array of currently vissible positions.
+-(void)positionsVissibleAfterScrolling:(NSArray *)positions; //gets called when scrollview ends decelerating and gives an array of currently vissible positions.
 
 
 @end
