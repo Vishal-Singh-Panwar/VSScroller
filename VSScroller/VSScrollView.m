@@ -84,7 +84,7 @@
         {
             NSNumber *width = [NSNumber numberWithFloat:self.bounds.size.width];
             CGFloat cellSpacing = 0;
-            CGFloat cellHeight = 0;
+            CGFloat cellHeight = self.bounds.size.height;
             if ([self.dataSource respondsToSelector:@selector(vsscrollView:widthForViewAtPosition:)])
             {
                 width = [NSNumber numberWithFloat:[self.dataSource vsscrollView:self widthForViewAtPosition:i]];
@@ -361,11 +361,14 @@
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     [self removeAliveOutOfBoundsCells];
+    
+    [self.delegate positionsVissibleAfterScrolling:[NSArray arrayWithArray:currentlyVissiblePositions]];
 
 }
 
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
+    NSLog(@"called");
     if (!decelerate)
     {
         [self removeAliveOutOfBoundsCells];
@@ -490,5 +493,6 @@
     }
 
 }
+
 
 @end

@@ -27,12 +27,15 @@
     [self.tableTypeScroll setPaginationEnabled:NO];
     [self.tableTypeScroll setAllowVerticalScrollingForOutOfBoundsCell:YES];
     [self.tableTypeScroll setDelegate:self];
+   // [self.tableTypeScroll setPaginationEnabled:YES];
     dataArr = [[NSMutableArray alloc]init];
     for (int i = 0;i<100;i++)
     {
         [dataArr addObject:[NSString stringWithFormat:@"The Dark Knight is rising..  %i",i]];
                            
     }
+
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -185,7 +188,11 @@
     
 }
 
+-(void)positionsVissibleAfterScrolling:(NSArray *)positions
+{
+    NSLog(@"positions = %@",positions);
 
+}
 
 
 - (void)viewDidUnload

@@ -29,6 +29,8 @@
 @optional
 -(void)vsscrollView:(VSScrollView *)scrollview willDisplayCell:(VSScrollViewCell *)cell atPosition:(int)position; //is called whenever a cell is ready to be displayed
 
+-(void)positionsVissibleAfterScrolling:(NSArray *)positions;
+
 
 @end
 typedef enum AnimationType
