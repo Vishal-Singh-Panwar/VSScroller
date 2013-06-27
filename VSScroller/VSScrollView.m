@@ -361,8 +361,11 @@
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     [self removeAliveOutOfBoundsCells];
-    
-    [self.delegate positionsVissibleAfterScrolling:[NSArray arrayWithArray:currentlyVissiblePositions]];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(positionsVissibleAfterScrolling:)])
+    {
+        [self.delegate positionsVissibleAfterScrolling:[NSArray arrayWithArray:currentlyVissiblePositions]];
+
+    }
 
 }
 
@@ -388,6 +391,11 @@
     }
     [self setCellLostExpected:NO];
     [self adjustContentSizeForHeight];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(positionsVissibleAfterScrolling:)])
+    {
+        [self.delegate positionsVissibleAfterScrolling:[NSArray arrayWithArray:currentlyVissiblePositions]];
+        
+    }
 
 }
 
