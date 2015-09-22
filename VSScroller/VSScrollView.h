@@ -8,17 +8,17 @@
 
 @class VSScrollView,VSScrollViewCell;
 @protocol VSScrollerDatasource <NSObject>
--(VSScrollViewCell *)vsscrollView:(VSScrollView *)scrollView viewAtPosition:(int)position;
+-(VSScrollViewCell *)vsscrollView:(VSScrollView *)scrollView viewAtPosition:(NSInteger)position;
 
 -(NSUInteger)numberOfViewInvsscrollview:(VSScrollView *)scrollview;
 @optional
 
--(CGFloat)vsscrollView:(VSScrollView *)scrollView widthForViewAtPosition:(int)position; // you can decide variable width for views at differnet position. By default width is width of VSScrollView.
+-(CGFloat)vsscrollView:(VSScrollView *)scrollView widthForViewAtPosition:(NSInteger)position; // you can decide variable width for views at differnet position. By default width is width of VSScrollView.
 
 -(CGFloat)cellSpacingAfterCellAtPosition:(int)position;   // you can decide cell spacing for each position by implementing this method, by default , spacing is '0'
 
 
--(CGFloat)vsscrollView:(VSScrollView *)scrollView heightForViewAtPosition:(int)position; // you can decide the height for cells at each position...by default, height will be height of VSScrollview.
+-(CGFloat)vsscrollView:(VSScrollView *)scrollView heightForViewAtPosition:(NSInteger)position; // you can decide the height for cells at each position...by default, height will be height of VSScrollview.
 
 
 @end
@@ -27,7 +27,7 @@
 @protocol VSScrollerDelegate <NSObject>
 
 @optional
--(void)vsscrollView:(VSScrollView *)scrollview willDisplayCell:(VSScrollViewCell *)cell atPosition:(int)position; //is called whenever a cell is ready to be displayed.
+-(void)vsscrollView:(VSScrollView *)scrollview willDisplayCell:(VSScrollViewCell *)cell atPosition:(NSInteger)position; //is called whenever a cell is ready to be displayed.
 
 -(void)positionsVissibleAfterScrolling:(NSArray *)positions; //gets called when scrollview ends decelerating and gives an array of currently vissible positions.
 
