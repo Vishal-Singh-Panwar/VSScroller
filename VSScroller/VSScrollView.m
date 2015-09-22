@@ -210,8 +210,8 @@
 
 -(void)inqueueVSScrollviewCell:(BOOL)movingForward
 {
-    int nextPosition;
-    int previousPosition;
+    NSInteger nextPosition;
+    NSInteger previousPosition;
     if ([currentlyVissiblePositions count]>0)
     {
         
@@ -238,10 +238,10 @@
         CGRect frame = [self frameForPosition:nextPosition];
         if (CGRectIntersectsRect(frame, myScrollView.bounds))
         {
-            if (![currentlyVissiblePositions containsObject:[NSNumber numberWithInt:nextPosition]])
+            if (![currentlyVissiblePositions containsObject:[NSNumber numberWithInteger:nextPosition]])
             {
-                int insertIndex = movingForward? [currentlyVissiblePositions count]:0;
-                [currentlyVissiblePositions insertObject:[NSNumber numberWithInt:nextPosition] atIndex:insertIndex];
+                NSInteger insertIndex = movingForward? [currentlyVissiblePositions count]:0;
+                [currentlyVissiblePositions insertObject:[NSNumber numberWithInteger:nextPosition] atIndex:insertIndex];
                 [self adjustContentSizeForHeight];
 
                 VSScrollViewCell *view =[self.dataSource vsscrollView:self viewAtPosition:nextPosition];
@@ -264,7 +264,7 @@
     if (!CGRectIntersectsRect(framePreviousPosition, myScrollView.bounds))
     {
         
-        [currentlyVissiblePositions removeObject:[NSNumber numberWithInt:previousPosition]];
+        [currentlyVissiblePositions removeObject:[NSNumber numberWithInteger:previousPosition]];
         [self adjustContentSizeForHeight];
         [self setDequedVSScrollViewCell:[myScrollView viewWithTag:previousPosition+100]];
     
@@ -320,7 +320,7 @@
 {
     for (int i = 0; i<[currentlyVissiblePositions count]; i++)
     {
-         int position = [[currentlyVissiblePositions objectAtIndex:i]integerValue];
+         NSInteger position = [[currentlyVissiblePositions objectAtIndex:i]integerValue];
         VSScrollViewCell *view =[self.dataSource vsscrollView:self viewAtPosition:position];
         [view setFrame:[self frameForPosition:position]];
         [view setTag:position+100];
@@ -337,9 +337,9 @@
 
 }
 
--(CGRect)frameForPosition:(int)position
+-(CGRect)frameForPosition:(NSInteger)position
 {
-    NSArray *info = [widthPositionDict objectForKey:[NSNumber numberWithInt:position]];
+    NSArray *info = [widthPositionDict objectForKey:[NSNumber numberWithInteger:position]];
     NSValue *frameVal = [info objectAtIndex:1];
     CGRect frame = [frameVal CGRectValue];
     return frame;
