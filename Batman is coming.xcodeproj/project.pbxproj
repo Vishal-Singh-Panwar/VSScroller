@@ -298,7 +298,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VSScroller/Batman is coming-Prefix.pch";
 				INFOPLIST_FILE = "VSScroller/Batman is coming-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "Batman is coming";
 				WRAPPER_EXTENSION = app;
 			};
@@ -310,7 +310,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VSScroller/Batman is coming-Prefix.pch";
 				INFOPLIST_FILE = "VSScroller/Batman is coming-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "Batman is coming";
 				WRAPPER_EXTENSION = app;
 			};

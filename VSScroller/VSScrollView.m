@@ -49,11 +49,18 @@
 {
     [super drawRect:rect];
      myScrollView = [[UIScrollView alloc]initWithFrame:rect];
+    [myScrollView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self addSubview:myScrollView];
+
+    NSDictionary *viewsDict = NSDictionaryOfVariableBindings(myScrollView);
+    NSArray *hconstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"|[myScrollView]|" options:NSLayoutFormatAlignAllCenterX metrics:nil views:viewsDict];
+    NSArray *vconstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[myScrollView]|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDict];
+    [self addConstraints:hconstraints];
+    [self addConstraints:vconstraints];
     [myScrollView setDelegate:self];
     [myScrollView setShowsHorizontalScrollIndicator:NO];
     [myScrollView setShowsVerticalScrollIndicator:NO];
     [myScrollView setPagingEnabled:self.paginationEnabled];
-    [self addSubview:myScrollView];
     [self initiateCalls];
     
     
